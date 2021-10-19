@@ -1,0 +1,41 @@
+GET http://localhost:3001/todos/all HTTP/1.1
+
+###
+
+POST http://localhost:3001/todo/add HTTP/1.1
+content-type: application/json
+
+{
+    "id": 123456789,
+    "title": "new todo",
+    "completed": false
+}
+
+###
+
+PUT http://localhost:3001/todo/update HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1,
+    "title": "updated todo4",
+    "completed": false
+}
+
+###
+
+PUT http://localhost:3001/todo/complete HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1,
+    "completed": false
+}
+### 
+
+DELETE http://localhost:3001/todo/delete HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1
+}
